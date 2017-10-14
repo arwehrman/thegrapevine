@@ -1,0 +1,7 @@
+#not sure about keeping this here
+#use for testing for now
+<p> Wines you have tried,  <%= @user.username %>
+<% @user.wines.each do |wine| %>
+  <p><%= wine.name %></p>
+  <p><%= wine.vintage %></p>
+<% end %>
