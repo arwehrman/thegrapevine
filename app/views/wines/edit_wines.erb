@@ -1,1 +1,11 @@
 <h1>Edit a Wine entry</h1>
+<form action="/wines/<%=@wine.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+    <p>Maker: <input type="text" name="maker" value="<%=@wine.maker%>"></p>
+    <p>Type: <input type="text" name="wine_type" value="<%=@wine.wine_type%>"></p>
+    <p>Region: <input type="text" name="region" value="<%=@wine.region%>"></p>
+    <p>Vintage: <input type="text" name="vintage" value="<%=@wine.vintage%>"></p>
+    <p>Price: <input type="text" name="price" value="<%=@wine.price%>"></p>
+    <p>Rating: <input type="text" name="rating" value="<%=@wine.rating%>"></p>
+  <input type="submit" value="submit">
+</form>

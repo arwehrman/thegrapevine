@@ -1,6 +1,5 @@
-<h1>Show all wines</h1>
-<p> Welcome, <%= current_user.username %>
-<h2> Wines </h2>
+<h1>Your Grapevine</h1>
+<p><%= current_user.username %>
 
 <% @wines.each do |wine| %>
   <p>Maker: <%= wine.maker %></p>
