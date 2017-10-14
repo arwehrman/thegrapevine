@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20171014163157) do
   create_table "wines", force: :cascade do |t|
     t.string  "name"
     t.string  "maker"
-    t.string  "type"
+    t.string  "wine_type"
     t.string  "region"
     t.string  "vintage"
     t.decimal "price"

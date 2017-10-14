@@ -1,0 +1,9 @@
+<h1>Show all wines</h1>
+<p> Welcome, <%= current_user.username %>
+<h2> Wines </h2>
+
+<% @wines.each do |wine| %>
+  <p><%= wine.name %></p>
+  <p><%= wine.vintage %></p>
+  <p><%= wine.price %></p>
+<% end %>

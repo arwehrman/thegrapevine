@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if !logged_in?
     erb :'users/signup'
     else
-    redirect to :show_wines
+    redirect to :'wines/wines'
     end
   end
 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
       @user.save
       session[:user_id] = @user.id
-      erb :show_wines
+      erb :'wines/wines'
     end
   end
 
