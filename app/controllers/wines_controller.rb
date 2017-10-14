@@ -17,5 +17,10 @@ class WinesController < ApplicationController
     end
   end
 
+  post '/wines' do
+    @wine = current_user.wine.create(params)
+    redirect to '/wines'
+  end
+
 
 end
