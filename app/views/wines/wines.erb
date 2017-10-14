@@ -1,5 +1,4 @@
-<h1>Your Grapevine</h1>
-<p><%= current_user.username %>
+<h1><%= current_user.username %>'s Grapevine</h1>
 
 <% @wines.each do |wine| %>
   <p>Maker: <%= wine.maker %></p>
