@@ -1,9 +1,9 @@
 <h1><%= current_user.username %>'s Grapevine</h1>
 
 <% @wines.each do |wine| %>
-  <p>Maker: <%= wine.maker %></p>
+<p><a href="/wines/<%= wine.id %>"><%= wine.maker %></a>
   <p>Vintage: <%= wine.vintage %></p>
   <p>Type: <%= wine.wine_type %></p>
   <p>Region: <%= wine.region %></p>
-  <p>Rating: <%= wine.rating %></p>
+  <p>Rating: <%= wine.rating %></p>  
 <% end %>

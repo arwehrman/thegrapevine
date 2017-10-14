@@ -1,11 +1,11 @@
-<h1>Show a wine</h1>
+<h1>Wine Profile</h1>
 
-  <p>Maker: <%= wine.maker %></p>
-  <p>Vintage: <%= wine.vintage %></p>
-  <p>Type: <%= wine.wine_type %></p>
-  <p>Region: <%= wine.region %></p>
-  <p>Rating: <%= wine.rating %></p>
-<a href="/wines/<%=@wine.id%>/edit">Edit Wine</a>
+  <p>Maker: <%= @wine.maker %></p>
+  <p>Vintage: <%= @wine.vintage %></p>
+  <p>Type: <%= @wine.wine_type %></p>
+  <p>Region: <%= @wine.region %></p>
+  <p>Rating: <%= @wine.rating %></p>
+<a href="/wines/<%=@wine.id%>/edit"><button>Edit Wine</button>
 <form action="/wines/<%= @wine.id %>/delete" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete Wine">
