@@ -39,32 +39,31 @@ class WinesController < ApplicationController
   end
 
   get '/wines/:id/edit' do
-    if logged_in?
-      @wine = Wine.find_by_id(params[:id])
-      if @wine.user_id == current_user.id
+    @wine = Wine.find_by_id(params[:id])
+    if logged_in? && @wine.user_id == current_user.id
         erb :'wines/edit_wines'
-      else
-        redirect to '/wines'
-      end
     else
       redirect to '/login'
     end
   end
 
-  
-
-  delete '/wines/<%=@wine.id%>/delete' do
-    if logged_in?
-      @wine = Wine.find_by_id(params[:id])
-      if @wine.user_id == current_user.id
-        @wine.delete
-        redirect to '/wines'
-      else
-        redirect to '/wines'
-      end
+  patch '/wines/:id' do
+    if params[:maker] == ""
+      redirect to "/wines/:id/edit"
     else
-        redirect to '/login'
+      @wine = Wine.find_by_id(params[:id])
+      @wine.update(maker: params[:maker], wine_type: params[:wine_type], vintage: params[:vintage], price: params[:price], rating: params[:rating], region: params[:region])
+      redirect to "/wines/#{params[:id]}"
     end
   end
 
+  delete '/wines/:id/delete' do
+    @wine = Wine.find_by_id(params[:id])
+    if logged_in? && @wine.user_id == current_user.id
+        @wine.delete
+        redirect to '/wines'
+      else
+        redirect to '/login'
+    end
+  end
 end
