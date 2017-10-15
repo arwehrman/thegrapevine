@@ -1,5 +1,6 @@
 <h1>The Grapevine</h1>
 <h3>Sign Up</h3>
+<% if flash.has?(:message) %><div id="flash"><%= flash[:message] %></div><% end %>
 <form action="/signup" method="POST">
   <p>Name: <input type="text" name="username"></p>
   <p>Email: <input type="text" name="email"></p>
