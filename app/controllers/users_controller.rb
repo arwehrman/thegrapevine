@@ -1,9 +1,4 @@
 class UsersController < ApplicationController
-#might remove
-  get '/users/:slug' do
-    @user = User.find_by_slug(params[:slug])
-    erb :'users/show'
-  end
 
   get '/signup' do
     if !logged_in?
@@ -21,7 +16,7 @@ class UsersController < ApplicationController
       @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
       @user.save
       session[:user_id] = @user.id
-      erb :'wines/wines'
+      redirect to '/wines'
     end
   end
 
@@ -37,7 +32,7 @@ class UsersController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
     session[:user_id] = user.id
-    redirect "/wines"
+    redirect to "/wines"
     else
       flash[:message] = "You must have an account to log in"
       redirect to '/signup'

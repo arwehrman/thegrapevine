@@ -1,10 +1,19 @@
 <h1>Grow Your Grapevine</h1>
 <form action="/wines" method="POST">
-  <p>Maker: <input type="text" name="maker"></p>
+  <p>Maker:<input type="text" name="maker"></p>
   <p>Type: <input type="text" name="wine_type"></p>
   <p>Region: <input type="text" name="region"></p>
   <p>Vintage: <input type="text" name="vintage"></p>
   <p>Price: <input type="text" name="price"></p>
-  <p>Rating: <input type="text" name="rating"></p>
+  <p>Select a rating, 1 grape is don't buy again and 5 grapes is excellant"
+  <div class="select-style">
+        <select name="rating" id="rating">
+          <option value="1">1 grape</option>
+          <option value="2">2 grapes</option>
+          <option value="3">3 grapes</option>
+          <option value="4">4 grapes</option>
+          <option value="5">5 grapes</option>
+        </select>
+      </div>
   <input type="submit" class="button" name="submit">
 </form>
