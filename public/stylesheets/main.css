@@ -18,6 +18,16 @@
     font-family: Sans-Serif;
     line-height: 18px;
   }
+  #flash {
+  background: rgba(255,255,255,0.9);
+  border: 2px solid #8A2BE2;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  padding: 10px;
+  width: 100%;
+}
 
   a.button, input.button {
   display: inline;
