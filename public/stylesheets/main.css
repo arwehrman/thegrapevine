@@ -19,6 +19,19 @@
     line-height: 18px;
   }
 
+  a.button, input.button {
+  display: inline;
+  border: 2px solid #b28fc9;
+  background: #dbc9e8;
+  margin: 5px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #645e68;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+}
+
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);

@@ -5,8 +5,8 @@
   <p>Type: <%= @wine.wine_type %></p>
   <p>Region: <%= @wine.region %></p>
   <p>Rating: <%= @wine.rating %></p>
-<a href="/wines/<%=@wine.id%>/edit"><button>Edit Wine</button>
+<a href="/wines/<%=@wine.id%>/edit" class="button">Edit Wine</a><br><br>
 <form action="/wines/<%= @wine.id %>/delete" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Wine">
+  <input type="submit" class= "button" value="Delete Wine">
 </form>
