@@ -21,4 +21,4 @@ localhost:9393
 ```
 
 ### License
-The full [MIT license](https://github.com/ddhogan/starship-LCARS/blob/master/LICENSE) can be found in this repo.
+The full [MIT license]() can be found in this repo.
