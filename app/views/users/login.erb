@@ -3,6 +3,7 @@
 <% if flash.has?(:message) %><div id="flash"><%= flash[:message] %></div><% end %>
 <br>
 <h3>Login</h3>
+<br>
 <form action="/login" method="POST">
   <p>Userame: <input type="text" name="username"></p>
   <p>Password: <input type="text" name="password"></p>

@@ -1,4 +1,7 @@
-<h1>Edit a Wine entry</h1>
+<h1>The Grapevine</h1>
+
+<p>Edit Wine</p>
+
 <form action="/wines/<%=@wine.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
     <p>Maker: <input type="text" name="maker" value="<%=@wine.maker%>"></p>
@@ -9,3 +12,4 @@
     <p>Rating: <input type="text" name="rating" value="<%=@wine.rating%>"></p>
   <input type="submit" class= "button" value="submit">
 </form>
+<a href='/wines' class="button">My Grapevine</a>

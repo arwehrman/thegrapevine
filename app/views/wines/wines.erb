@@ -1,5 +1,9 @@
-<h1><%= current_user.username %>'s Grapevine</h1>
+<h1>The Grapevine</h1>
+<br>
+<h3><%= current_user.username %>'s Grapevine</h3>
+<br>
 <% if flash.has?(:message) %><div id="flash"><%= flash[:message] %></div><% end %><br>
+<p>Click on a wine to view or edit the profile</p>
 <% @users_wine.each do |wine| %>
 <p><a href="/wines/<%= wine.id %>"><%= wine.maker %></a>
   <p>Vintage: <%= wine.vintage %></p>
