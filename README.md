@@ -19,6 +19,3 @@ Open up a new browser tab and navigate to:
 ```
 localhost:9393
 ```
-
-### License
-The full [MIT license]() can be found in this repo.
