@@ -19,3 +19,8 @@ Open up a new browser tab and navigate to:
 ```
 localhost:9393
 ```
+## License
+The gem is available as open source under the terms of the MIT License.
+
+## Contribution
+Bug reports and pull requests are welcome on GitHub at https://github.com/arwehrman/thegrapevine. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
