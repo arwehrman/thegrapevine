@@ -13,6 +13,7 @@ class WinesController < ApplicationController
     if logged_in?
       erb :'wines/create_wine'
     else
+      flash[:message] = "You must be logged add a new wine"
       redirect to '/login'
     end
   end
@@ -61,6 +62,7 @@ class WinesController < ApplicationController
     @wine = Wine.find_by_id(params[:id])
     if logged_in? && @wine.user_id == current_user.id
         @wine.delete
+        flash[:message] = "The wine has been removed from your Grapevine"
         redirect to '/wines'
       else
         redirect to '/login'

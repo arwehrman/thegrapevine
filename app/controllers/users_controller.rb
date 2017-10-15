@@ -38,7 +38,8 @@ class UsersController < ApplicationController
     session[:user_id] = user.id
     redirect "/wines"
     else
-    redirect to '/signup'
+      flash[:message] = "You must have an account to log in"
+      redirect to '/signup'
     end
   end
 
