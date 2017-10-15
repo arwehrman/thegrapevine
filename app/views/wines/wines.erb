@@ -3,8 +3,5 @@
 <% @wines.each do |wine| %>
 <p><a href="/wines/<%= wine.id %>"><%= wine.maker %></a>
   <p>Vintage: <%= wine.vintage %></p>
-  <p>Type: <%= wine.wine_type %></p>
-  <p>Region: <%= wine.region %></p>
-  <p>Rating: <%= wine.rating %></p>
 <% end %>
 <a href='/wines/new' class="button">Add a New Wine</a><br><br>
