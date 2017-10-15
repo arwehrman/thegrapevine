@@ -2,7 +2,7 @@ class WinesController < ApplicationController
 
   get '/wines' do
     if logged_in?
-      @wines = Wine.all
+      @users_wine = current_user.wines
       erb :'wines/wines'
     else
       redirect to '/login'
