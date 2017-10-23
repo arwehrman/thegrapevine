@@ -9,7 +9,16 @@
     <p>Region: <input type="text" name="region" value="<%=@wine.region%>"></p>
     <p>Vintage: <input type="text" name="vintage" value="<%=@wine.vintage%>"></p>
     <p>Price: <input type="text" name="price" value="<%=@wine.price%>"></p>
-    <p>Rating: <input type="text" name="rating" value="<%=@wine.rating%>"></p>
+    <p>Select a rating, 1 grape: don't buy again and 5 grapes: buy a case!"</p>
+    <div class="select-style">
+          <select name="rating" id="rating">
+            <option value="1">1 grape</option>
+            <option value="2">2 grapes</option>
+            <option value="3">3 grapes</option>
+            <option value="4">4 grapes</option>
+            <option value="5">5 grapes</option>
+          </select>
+        </div>
   <input type="submit" class= "button" value="submit">
 </form>
 <a href='/wines' class="button">My Grapevine</a>
