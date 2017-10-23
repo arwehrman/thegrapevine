@@ -2,7 +2,7 @@
 
 
 ## Overview
-The Grapevine app is wine tracker app. Users can add, edit and delete wines in their grapevine (wine list).
+The Grapevine app is a wine tracker app. Users can add, edit and delete wines in their grapevine (wine list). Eventually this project will allow users to view other user's Grapevines for wine suggestions.
 
 
 ## Installation
