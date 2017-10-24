@@ -9,14 +9,13 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params[:username] == "" || params[:email] == "" || params[:password] == ""
-      flash[:message] = "You must enter all fields"
-      redirect to '/signup'
-    else
-      @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
-      @user.save
+    @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
+    if @user.save
       session[:user_id] = @user.id
       redirect to '/wines'
+    else
+      flash[:message] = @user.errors.full_messages.join(', ')
+      redirect to '/signup'
     end
   end
 
