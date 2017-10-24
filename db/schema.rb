@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20171024154549) do
     t.string  "price"
     t.integer "rating"
     t.integer "user_id"
-    t.text    "comment"
+    t.string  "comment"
   end
 
 end
