@@ -12,17 +12,20 @@
   <p>Comments:<p>
     <%@wine.comments.each do |comment|%>
     <p><%= comment.content %></p>
+    <form action="/wines/:wine_id/comments/:id" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" class= "button" value="Delete Comment">
+    </form><br>
     <% end %>
-
-
-<a href="/wines/<%=@wine.id%>/edit" class="button">Edit Wine</a>
-<form action="/wines/<%= @wine.id %>/delete" method="post">
-  <input id="hidden" type="hidden" name="_method" value="delete">
-  <input type="submit" class= "button" value="Delete Wine">
-</form><br>
 
 <h4>Add Comments</h4><br>
 <form action="/wines/<%= @wine.id %>/comments" method="post">
   <p>Comment: <input type="text" name="content"></p>
   <input type="submit" class= "button" value="Add Comment">
-</form>
+</form><br>
+
+<a href="/wines/<%=@wine.id%>/edit" class="button">Edit Wine</a><br><br>
+<form action="/wines/<%= @wine.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" class= "button" value="Delete Wine">
+</form><br>
