@@ -17,8 +17,7 @@
 </form><br>
 
 <h4>Comments</h4>
-<form action="/wines/:wine_id/comments" method="POST">
-  <input type="hidden" name="comment[wine_id]" value="<%= @wine.id %>"
+<form action="/wines/#{@wine.id}/comments" method="post">
   <p>Comment:<input type="text" name="content"></p>
   <input type="submit" class= "button" value="Add Comment">
 </form>
