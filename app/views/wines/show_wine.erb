@@ -9,6 +9,11 @@
   <p>Region: <%= @wine.region %></p>
   <p>Price: <%= @wine.price %></p>
   <p>Grape Rating: <%= @wine.rating %></p>
+  <p>Comments:<p>
+    <%@wine.comments.each do |comment|%>
+    <p><%= comment.content %></p>
+    <% end %>
+
 
 <a href="/wines/<%=@wine.id%>/edit" class="button">Edit Wine</a><br><br>
 <form action="/wines/<%= @wine.id %>/delete" method="post">
@@ -16,8 +21,8 @@
   <input type="submit" class= "button" value="Delete Wine">
 </form><br>
 
-<h4>Comments</h4>
+<h4>Comments</h4><br>
 <form action="/wines/<%= @wine.id %>/comments" method="post">
-  <p>Comment:<input type="text" name="content"></p>
+  <p>Comment: <input type="text" name="content"></p>
   <input type="submit" class= "button" value="Add Comment">
 </form>
