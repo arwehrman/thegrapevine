@@ -13,7 +13,7 @@
   <p>Comments:<p>
     <%@wine.comments.each do |comment|%>
     <p><%= comment.content %></p>
-  <form action="/wines/<%= @wine.id %>/comments/:id" method="post">
+  <form action="/wines/<%= @wine.id %>/comments/:id method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" class= "button" value="Delete Comment">
   </form><br>
