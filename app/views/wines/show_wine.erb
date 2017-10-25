@@ -9,14 +9,15 @@
   <p>Region: <%= @wine.region %></p>
   <p>Price: <%= @wine.price %></p>
   <p>Grape Rating: <%= @wine.rating %></p>
+
   <p>Comments:<p>
     <%@wine.comments.each do |comment|%>
     <p><%= comment.content %></p>
-    <form action="/wines/:wine_id/comments/:id" method="post">
-      <input id="hidden" type="hidden" name="_method" value="delete">
-      <input type="submit" class= "button" value="Delete Comment">
-    </form><br>
-    <% end %>
+  <form action="/wines/:wine_id/comments/:id" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" class= "button" value="Delete Comment">
+  </form><br>
+  <% end %>
 
 <h4>Add Comments</h4><br>
 <form action="/wines/<%= @wine.id %>/comments" method="post">
