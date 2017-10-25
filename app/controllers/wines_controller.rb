@@ -21,7 +21,7 @@ class WinesController < ApplicationController
   post '/wines' do
     if logged_in?
       @current_user = current_user
-      @wine = current_user.wines.create(maker: params[:maker], wine_type: params[:wine_type], vintage: params[:vintage], price: params[:price], rating: params[:rating], region: params[:region], comment: params[:comment])
+      @wine = current_user.wines.create(maker: params[:maker], wine_type: params[:wine_type], vintage: params[:vintage], price: params[:price], rating: params[:rating], region: params[:region])
       @wine.user_id = @current_user.id
       @wine.save
       redirect to '/wines'
@@ -53,7 +53,7 @@ class WinesController < ApplicationController
       redirect to "/wines/:id/edit"
     else
       @wine = Wine.find_by_id(params[:id])
-      @wine.update(maker: params[:maker], wine_type: params[:wine_type], vintage: params[:vintage], price: params[:price], rating: params[:rating], region: params[:region], comment: params[:comment])
+      @wine.update(maker: params[:maker], wine_type: params[:wine_type], vintage: params[:vintage], price: params[:price], rating: params[:rating], region: params[:region])
       redirect to "/wines/#{params[:id]}"
     end
   end
