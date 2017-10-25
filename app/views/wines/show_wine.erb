@@ -1,6 +1,8 @@
 <h1>The Grapevine</h1>
 <br>
-<h3>Wine Profile</h3><br>
+<a href='/wines'>My Grapevine</a>
+<br><br>
+<h2>Wine Profile</h2><br>
   <p>Maker: <%= @wine.maker %></p>
   <p>Vintage: <%= @wine.vintage %></p>
   <p>Type: <%= @wine.wine_type %></p>
@@ -13,4 +15,10 @@
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" class= "button" value="Delete Wine">
 </form><br>
-<a href='/wines' class="button">My Grapevine</a>
+
+<h4>Comments</h4>
+<form action="/wines/:wine_id/comments" method="POST">
+  <input type="hidden" name="comment[wine_id]" value="<%= @wine.id %>"
+  <p>Comment:<input type="text" name="content"></p>
+  <input type="submit" class= "button" value="Add Comment">
+</form>
