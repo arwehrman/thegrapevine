@@ -61,7 +61,7 @@ class WinesController < ApplicationController
   delete '/wines/:id/delete' do
     @wine = Wine.find_by_id(params[:id])
     if logged_in? && @wine.user_id == current_user.id
-        @wine.delete
+        @wine.destroy
         flash[:message] = "The wine has been removed from your Grapevine"
         redirect to '/wines'
       else
