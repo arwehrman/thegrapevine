@@ -8,10 +8,13 @@ class CommentsController < ApplicationController
   end
 
   delete '/wines/:wine_id/comments/:id' do
+    #@wine = Wine.find_by(id: params[:wine_id])
     @comment = Comment.find_by(id: params[:id])
-    #raise params.inspect
+    if @comment.present?
+    raise params.inspect
     @comment.destroy
     redirect back
+  end
   end
 
 end
