@@ -9,11 +9,10 @@
   <p>Region: <%= @wine.region %></p>
   <p>Price: <%= @wine.price %></p>
   <p>Grape Rating: <%= @wine.rating %></p>
-
+<!--comments for for wine profile-->
   <p>Comments:<p>
     <%@wine.comments.each do |comment|%>
     <p><%= comment.content %></p>
-
   <form action="/wines/<%= @wine.id %>/comments/:id" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" class= "button" value="Delete Comment">
@@ -26,6 +25,7 @@
   <input type="submit" class= "button" value="Add Comment">
 </form><br>
 
+<!--buttons to edit and delete wine profile-->
 <a href="/wines/<%=@wine.id%>/edit" class="button">Edit Wine</a><br><br>
 <form action="/wines/<%= @wine.id %>/delete" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
