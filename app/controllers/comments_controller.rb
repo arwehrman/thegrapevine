@@ -7,14 +7,19 @@ class CommentsController < ApplicationController
     redirect back
   end
 
+  get '/wines/:wine_id/comments/:id' do
+    @wine = Wine.find_by(id: params[:wine_id])
+    @comment = @wine.comments.find_by(id: params[:id])
+  end
+
   delete '/wines/:wine_id/comments/:id' do
-    #@wine = Wine.find_by(id: params[:wine_id])
-    @comment = Comment.find_by(id: params[:id])
-    if @comment.present?
-    #raise params.inspect
-    @comment.destroy
-    redirect back
-  else
+    @wine = Wine.find_by(id: params[:wine_id])
+    @comment = @wine.comments.find_by(id: params[:id])
+      if @comment.present?
+      #raise params.inspect
+        @comment.destroy
+        redirect back
+      else
     #testing why its not grabbing id
     redirect to '/wines'
   end
