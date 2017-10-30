@@ -11,7 +11,7 @@
     width: 100%;
   }
 
-  /* --- Welcome Page Styles --- */
+
   body {
     background-color: purple;
     color: #333;
@@ -25,6 +25,22 @@
   margin: 0 auto 20px;
 }
 
+/*--- Wine Profile ---*/
+div.wine {
+  border: 1px solid black;
+  background-color: #dbc9e8;
+  padding-left: 10px;
+}
+
+
+/*--- Forms ---*/
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
   a.button, input.button {
   display: inline;
   border: 2px solid #b28fc9;
@@ -37,6 +53,20 @@
   text-decoration: none;
   font-family: 'Lora', serif;
 }
+
+/*--- Comment Form ---*/
+input.textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    resize: none;
+}
+
 
   .wrapper {
     background: #fff;
@@ -104,6 +134,8 @@
   }
 
 }
+
+
 
 @media screen and (max-width: 600px) {
   .wrapper {

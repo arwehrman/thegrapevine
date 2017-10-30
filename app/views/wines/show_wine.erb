@@ -2,6 +2,7 @@
 <br>
 <a href='/wines'>My Grapevine</a>
 <br><br>
+<div class= "wine">
 <h2>Wine Profile</h2><br>
   <p>Maker: <%= @wine.maker %></p>
   <p>Vintage: <%= @wine.vintage %></p>
@@ -9,6 +10,7 @@
   <p>Region: <%= @wine.region %></p>
   <p>Price: <%= @wine.price %></p>
   <p>Grape Rating: <%= @wine.rating %></p>
+</div>
 <!--comments for for wine profile-->
   <p>Comments:<p>
     <%@wine.comments.each do |comment|%>
@@ -21,7 +23,7 @@
 
 <h4>Add Comments</h4><br>
 <form action="/wines/<%= @wine.id %>/comments" method="post">
-  <p>Comment: <input type="text" name="content"></p>
+  <p>Comment: <input class="textarea" type="text_field" name="content"></p>
   <input type="submit" class= "button" value="Add Comment">
 </form><br>
 
