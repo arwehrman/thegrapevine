@@ -13,25 +13,20 @@
 
 
   body {
-    background-color: purple;
+    background-color: #2A1B3D;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
   }
-  #flash {
-  color: #9400D3;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0 auto 20px;
-}
+
 
 /*--- Wine Profile ---*/
 div.wine {
   border: 1px solid black;
-  background-color: #dbc9e8;
+  background-color: purple;
   padding-left: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-
 
 /*--- Forms ---*/
 
@@ -67,23 +62,11 @@ input.textarea {
     resize: none;
 }
 
-
-  .wrapper {
-    background: #fff;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
-    width: 85%;
-  }
-
   h1 {
     font-size: 36px;
     line-height: 54px;
     color: #4B0082;
-    text-shadow: 2px 2px 5px ForestGreen;
+    text-shadow: 2px 2px 5px #A4B3B6;
   }
 
   h2 {
@@ -111,21 +94,6 @@ input.textarea {
     width: 60%; /* 480px / 800px */
   }
 
-  .sidebar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-  }
-
-  .sidebar ul {
-    font-size: 14px;
-  }
-
-  .branding {
-    clear: both;
-  }
 
   footer.branding {
     border-top: 2px solid #ccc;
@@ -133,7 +101,7 @@ input.textarea {
     padding-top: 20px;
   }
 
-}
+
 
 
 
